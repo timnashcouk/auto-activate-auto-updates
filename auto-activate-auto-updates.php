@@ -62,13 +62,3 @@ register_activation_hook( __FILE__, function(){
 	}
 	return true;
 });
-
-/**
- * Triggers Uninstall Hook when the plugin is removed
- * @since 1.2.0
- * @return bool
- */
-register_uninstall_hook( __FILE__, function(){
-	// Delete our option 
-	delete_option( 'auto_update_deactivated_plugins' );
-});
